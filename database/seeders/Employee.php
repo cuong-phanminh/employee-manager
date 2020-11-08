@@ -32,6 +32,12 @@ class Employee extends Seeder
                 'name' => 'Trương Vô Kỵ',
                 'email' => ('voky@gmail.com'),
                 'is_deleted' => false
+            ],
+            [
+                'id' => 4,
+                'name' => 'Tran Van Tuan',
+                'email' => ('vantuan@gmail.com'),
+                'is_deleted' => false
             ]
         ]);
     }
