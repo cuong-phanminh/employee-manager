@@ -28,7 +28,7 @@
             <th>No.</th>
             <th>User Name</th>
             <th>Total Point</th>
-            <th>Point detaile</th>
+            <th>Point detail</th>
           </tr>
           <?php
           $stt = 1;

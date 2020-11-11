@@ -42,7 +42,7 @@ class CriteriaController extends Controller
     
     public function destroy($id)
     {
-        // $criteria = Criteria::find($id)->delete();
+        $criteria = Criteria::find($id)->delete();
         return redirect()->back();
     }
 }

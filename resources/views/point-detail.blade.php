@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="box">
-      <h3 class="title text-uppercase" style="text-align: center;">POINT DETAILE OF {{$employee->name}}</h3>
+      <h3 class="title text-uppercase" style="text-align: center;">POINT DETAIL OF {{$employee->name}}</h3>
       <!-- /.box-header -->
       <div class="box-body table-responsive no-padding">
         <table class="table table-hover text-center">

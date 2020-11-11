@@ -30,25 +30,12 @@
                 <div class="box-body">
                     <div class="form-group">
                         <label for="name">Employee Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter employee name" value="">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter employee name" value="{{$employeeById->name}}">
                     </div>
                     <div class="form-group">
                         <label for="email">Employee Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter employee email" value="">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter employee email" value="{{$employeeById->email}}">
                     </div>
-                    <div class="form-group">
-                        <label for="email">Employee Phone</label>
-                        <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter employee phone" value="">
-                    </div>
-                    <div class="form-group">
-                        <label>Gender</label>
-                        <select class="form-control" name="gender" id="gender">
-                            <option value="">Choose employee gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                    </div>
-
                 </div>
                 <div class="box-footer">
                     <button type="submit" class="btn btn-warning btn-edit-product">Update</button>
