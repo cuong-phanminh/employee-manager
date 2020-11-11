@@ -31,10 +31,16 @@
                     <div class="form-group">
                         <label for="name">Employee Name</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter employee name" value="{{$employeeById->name}}">
+                        @error('name')
+                        <div class="error" style="color: red;">{{$message}}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="email">Employee Email</label>
                         <input type="email" class="form-control" name="email" id="email" placeholder="Enter employee email" value="{{$employeeById->email}}">
+                        @error('email')
+                        <div class="error" style="color: red;">{{$message}}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="box-footer">

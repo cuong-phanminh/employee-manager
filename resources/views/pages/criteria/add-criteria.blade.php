@@ -23,13 +23,17 @@
                 <div class="box-body">
                     <div class="form-group">
                         <label for="name">Criteria Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter your criteria name"
-                            value="">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter your criteria name" value="{{old('name')}}">
+                        @error('name')
+                        <div class="error" style="color: red;">{{$message}}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Point</label>
-                        <input type="text" class="form-control" name="point" id="point"
-                            placeholder="Enter point's criteria" value="">
+                        <input type="text" class="form-control" name="point" id="point" placeholder="Enter point's criteria" value="{{old('point')}}">
+                        @error('point')
+                        <div class="error" style="color: red;">{{$message}}</div>
+                        @enderror
                     </div>
                 </div>
                 <!-- /.box-body -->

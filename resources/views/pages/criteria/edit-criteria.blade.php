@@ -31,10 +31,16 @@
                     <div class="form-group">
                         <label for="name">Criteria Name</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter criteria name" value="{{$criteriaById->name}}">
+                        @error('name')
+                        <div class="error" style="color: red;">{{$message}}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="point_criteria">Point criteria</label>
                         <input type="text" class="form-control" name="point" id="point_criteria" placeholder="Enter point criteria" value="{{$criteriaById->point}}">
+                        @error('point')
+                        <div class="error" style="color: red;">{{$message}}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="box-footer">

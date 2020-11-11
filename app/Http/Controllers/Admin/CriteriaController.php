@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CriteriaRequest;
+use App\Http\Requests\UpdateCriteriaRequest;
 use App\Models\Criteria;
 use Illuminate\Http\Request;
 
@@ -19,7 +21,7 @@ class CriteriaController extends Controller
         return view('pages.criteria.add-criteria');
     }
 
-    public function store(Request $request)
+    public function store(CriteriaRequest $request)
     {
         $data = $request->only('name', 'point');
         Criteria::create($data);
@@ -32,7 +34,7 @@ class CriteriaController extends Controller
 
         return view('pages.criteria.edit-criteria', compact('criteriaById'));
     }
-    public function update(Request $request, $id)
+    public function update(UpdateCriteriaRequest $request, $id)
     {
         $data = $request->only('name', 'point');
         $criteria = Criteria::find($id);    

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Employee;
+// use App\Models\Employee;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
+use App\Http\Requests\EmployeeRequest;
+use App\Http\Requests\UpdateEmployeeRequest;
 use App\Repositories\Employees\EmployeeRepositoryInterface;
 
 
@@ -29,7 +31,7 @@ class EmployeeController extends Controller
         return view('pages.employee.add-employee');
     }
 
-    public function store(Request $request)
+    public function store(EmployeeRequest $request)
     {
         $data = $request->only('name', 'email');
         $employee = $this->employeeRepository->create($data);
@@ -43,7 +45,7 @@ class EmployeeController extends Controller
         return view('pages.employee.edit-employee', compact('employeeById'));
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateEmployeeRequest $request, $id)
     {
         $data = $request->only('name', 'point');
         // $employee = Employee::find($id);    

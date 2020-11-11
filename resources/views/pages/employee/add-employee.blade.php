@@ -23,13 +23,17 @@
                 <div class="box-body">
                     <div class="form-group">
                         <label for="name">Employee Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter your product name"
-                            value="">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter your product name" value="{{old('name')}}">
+                        @error('name')
+                        <div class="error" style="color: red;">{{$message}}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="email">Employee Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter employee email"
-                            value="">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter employee email" value="{{old('email')}}">
+                        @error('email')
+                        <div class="error" style="color: red;">{{$message}}</div>
+                        @enderror
                     </div>
                 </div>
                 <!-- /.box-body -->
