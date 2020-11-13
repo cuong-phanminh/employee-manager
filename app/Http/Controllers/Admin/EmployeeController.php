@@ -42,6 +42,7 @@ class EmployeeController extends Controller
     {
         // $employeeById = Employee::find($id);
         $employeeById = $this->employeeRepository->find($id);
+        // $employee = $this->employeeRepository->getEmployee();
         return view('pages.employee.edit-employee', compact('employeeById'));
     }
 

@@ -20,7 +20,7 @@ return [
     | Application Environment
     |--------------------------------------------------------------------------
     |
-    | This value determines the "environment" your application is currently
+    | This value determines the "environment    " your application is currently
     | running in. This may determine how you prefer to configure various
     | services the application utilizes. Set this in your ".env" file.
     |
@@ -170,6 +170,9 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
+        App\Providers\EmployeeServiceProvider::class,
+        App\Providers\CriteriaServiceProvider::class,
+        App\Providers\EmployeeCriteriaServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,

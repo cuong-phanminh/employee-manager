@@ -3,8 +3,7 @@ namespace App\Repositories\Employees;
 
 use App\Repositories\BaseRepository;
 
-class EmployeeRepository extends BaseRepository 
-                            implements EmployeeRepositoryInterface
+class EmployeeRepository extends BaseRepository implements EmployeeRepositoryInterface
 {
     //lấy model tương ứng
     public function getModel()
@@ -14,6 +13,7 @@ class EmployeeRepository extends BaseRepository
 
     public function getEmployee()
     {
-        
+        // $data = $this->model->with('criterias')->first();
+        // return $data;
     }
 }

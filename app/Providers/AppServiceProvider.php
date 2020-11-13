@@ -13,16 +13,21 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(
-            \App\Repositories\Employees\EmployeeRepositoryInterface::class,
-            \App\Repositories\Employees\EmployeeRepository::class
-        );
+        // $models = array(
+        //     'Employee',
+        //     'Criteria',
+        // );
+        
+        // foreach ($models as $model) {
+        //     $this->app->bind("\App\Repositories\{$model}s\{$model}RepositoryInterface::class,", "App\Repositories\{$model}s\{$model}Repository::class");
+        // }
     }
 
     /**
      * Bootstrap any application services.
      *
      * @return void
+     * 
      */
     public function boot()
     {
